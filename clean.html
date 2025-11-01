@@ -6,24 +6,27 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
+            margin: 0;          
+            padding: 10px 20px; 
         }
 
         .chart-row {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap; /* 小屏幕下自动换行 */
+            gap: 10px;           
+            flex-wrap: wrap;      
+            margin-bottom: 30px;  /* 行间距增大，和标题分开 */
+        }
+
+        .chart-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
         }
 
         .chart-container {
             text-align: center;
-            flex: 1 1 200px; /* 最小宽度200px，自适应 */
+            flex: 1 1 200px;      
         }
 
         .chart-container img {
@@ -31,20 +34,23 @@
             height: auto;
             border: 1px solid #ddd;
             border-radius: 8px;
-            padding: 5px;
+            padding: 2px;
             background-color: #fff;
+            display: block;       
+            margin: 0 auto;       
         }
 
         .chart-caption {
-            margin-top: 10px;
+            margin-top: 5px;      
             font-weight: bold;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <!-- <h2>LLM Automated Literature Review Evaluation Benchmark</h2> -->
-
+    <!-- 第一行图片 -->
+    <div class="chart-title">Three tasks evaluation scores across different disciplines</div>
     <div class="chart-row">
         <div class="chart-container">
             <img src="static/acc_score.png" alt="Reference Generation: Precision">
@@ -61,6 +67,27 @@
         <div class="chart-container">
             <img src="static/kpr_score.png" alt="Literature Review Writing: KPR">
             <div class="chart-caption">Literature Review Writing: KPR</div>
+        </div>
+    </div>
+
+    <!-- 第二行图片 -->
+    <div class="chart-title">Radar chart of the accuracy of LLM-generated references across various dimensions</div>
+    <div class="chart-row">
+        <div class="chart-container">
+            <img src="static/leida_external_first_author_t1.png" alt="Compare with Semantic Scholar(T1)">
+            <div class="chart-caption">External First Author T1</div>
+        </div>
+        <div class="chart-container">
+            <img src="static/leida_external_first_author_t3.png" alt="Compare with Semantic Scholar(T3)">
+            <div class="chart-caption">External First Author T3</div>
+        </div>
+        <div class="chart-container">
+            <img src="static/leida_internal_first_author_t1.png" alt="Compare with Human-cited References(T1)">
+            <div class="chart-caption">Internal First Author T1</div>
+        </div>
+        <div class="chart-container">
+            <img src="static/leida_internal_first_author_t3.png" alt="Compare with Human-cited References(T3)">
+            <div class="chart-caption">Internal First Author T3</div>
         </div>
     </div>
 
