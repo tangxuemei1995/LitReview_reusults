@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LLM Benchmark Charts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .chart-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap; /* 小屏幕下自动换行 */
+        }
+
+        .chart-container {
+            text-align: center;
+            flex: 1 1 200px; /* 最小宽度200px，自适应 */
+        }
+
+        .chart-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 5px;
+            background-color: #fff;
+        }
+
+        .chart-caption {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h2>LLM Automated Literature Review Evaluation Benchmark</h2> -->
+
+    <div class="chart-row">
+        <div class="chart-container">
+            <img src="static/acc_score.png" alt="Reference Generation: Precision">
+            <div class="chart-caption">Reference Generation: Precision</div>
+        </div>
+        <div class="chart-container">
+            <img src="static/t2_true_entailment.png" alt="Abstract Writing: True">
+            <div class="chart-caption">Abstract Writing: True</div>
+        </div>
+        <div class="chart-container">
+            <img src="static/acc_score_t3.png" alt="Review Composition: Precision">
+            <div class="chart-caption">Review Composition: Precision</div>
+        </div>
+        <div class="chart-container">
+            <img src="static/kpr_score.png" alt="Literature Review Writing: KPR">
+            <div class="chart-caption">Literature Review Writing: KPR</div>
+        </div>
+    </div>
+
+</body>
+</html>
